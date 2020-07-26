@@ -47,6 +47,7 @@ class CommandeController extends Controller
 
         $commande = new Commande();
         $commande->setTotal($input["total"]);
+        $commande->setIduser($input["iduser"]);
         $em = $this->getDoctrine()->getManager();
 
         $em->persist($commande);

@@ -53,7 +53,7 @@ class EventController extends Controller
         $event->setDescription($input["description"]);
         $event->setIddestination($input["iddestination"]);
         $event->setIdguide($input["idguide"]);
-
+        $event->setNbrpalcesreserv($input["nbrpalcesreserv"]);
         $em = $this->getDoctrine()->getManager();
         $em->persist($event);
         $em->flush();
