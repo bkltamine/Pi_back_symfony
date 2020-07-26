@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Location</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ location.id }}</td>
+            </tr>
+            <tr>
+                <th>Iduser</th>
+                <td>{{ location.iduser }}</td>
+            </tr>
+            <tr>
+                <th>Idbicyclette</th>
+                <td>{{ location.idbicyclette }}</td>
+            </tr>
+            <tr>
+                <th>Datedebut</th>
+                <td>{% if location.datedebut %}{{ location.datedebut|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ location.duree }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('location_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('location_edit', { 'id': location.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

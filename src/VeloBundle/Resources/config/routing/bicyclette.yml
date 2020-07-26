@@ -1,0 +1,24 @@
+bicyclette_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Bicyclette:index" }
+    methods:  GET
+
+bicyclette_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Bicyclette:show" }
+    methods:  GET
+
+bicyclette_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Bicyclette:new" }
+    methods:  [GET, POST]
+
+bicyclette_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VeloBundle:Bicyclette:edit" }
+    methods:  [GET, POST]
+
+bicyclette_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Bicyclette:delete" }
+    methods:  DELETE

@@ -1,0 +1,24 @@
+destination_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Destination:index" }
+    methods:  GET
+
+destination_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Destination:show" }
+    methods:  GET
+
+destination_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Destination:new" }
+    methods:  [GET, POST]
+
+destination_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VeloBundle:Destination:edit" }
+    methods:  [GET, POST]
+
+destination_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Destination:delete" }
+    methods:  DELETE

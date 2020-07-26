@@ -1,0 +1,20 @@
+reservation_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Reservation:index" }
+    methods:  GET
+
+reservation_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Reservation:show" }
+    methods:  GET
+
+reservation_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Reservation:new" }
+    methods:  [GET, POST]
+
+
+reservation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Reservation:delete" }
+    methods:  DELETE

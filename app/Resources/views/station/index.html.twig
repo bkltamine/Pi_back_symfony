@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Stations list</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomstation</th>
+                <th>Lieu</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for station in stations %}
+            <tr>
+                <td><a href="{{ path('station_show', { 'id': station.id }) }}">{{ station.id }}</a></td>
+                <td>{{ station.nomstation }}</td>
+                <td>{{ station.lieu }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('station_show', { 'id': station.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('station_edit', { 'id': station.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('station_new') }}">Create a new station</a>
+        </li>
+    </ul>
+{% endblock %}

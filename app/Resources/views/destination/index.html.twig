@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Destinations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Region</th>
+                <th>Delegation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for destination in destinations %}
+            <tr>
+                <td><a href="{{ path('destination_show', { 'id': destination.id }) }}">{{ destination.id }}</a></td>
+                <td>{{ destination.region }}</td>
+                <td>{{ destination.delegation }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('destination_show', { 'id': destination.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('destination_edit', { 'id': destination.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('destination_new') }}">Create a new destination</a>
+        </li>
+    </ul>
+{% endblock %}

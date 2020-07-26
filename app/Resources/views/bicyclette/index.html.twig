@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Bicyclettes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Age</th>
+                <th>Reference</th>
+                <th>Idstation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bicyclette in bicyclettes %}
+            <tr>
+                <td><a href="{{ path('bicyclette_show', { 'id': bicyclette.id }) }}">{{ bicyclette.id }}</a></td>
+                <td>{{ bicyclette.model }}</td>
+                <td>{{ bicyclette.age }}</td>
+                <td>{{ bicyclette.reference }}</td>
+                <td>{{ bicyclette.idstation }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('bicyclette_show', { 'id': bicyclette.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('bicyclette_edit', { 'id': bicyclette.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('bicyclette_new') }}">Create a new bicyclette</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,44 @@
+velo_station:
+    resource: "@VeloBundle/Resources/config/routing/station.yml"
+    prefix:   /station
+velo_destination:
+    resource: "@VeloBundle/Resources/config/routing/destination.yml"
+    prefix:   /destination
+velo_reservation:
+    resource: "@VeloBundle/Resources/config/routing/reservation.yml"
+    prefix:   /reservation
+velo_rating:
+    resource: "@VeloBundle/Resources/config/routing/rating.yml"
+    prefix:   /rating
+velo_location:
+    resource: "@VeloBundle/Resources/config/routing/location.yml"
+    prefix:   /location
+velo_event:
+    resource: "@VeloBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+velo_categorie:
+    resource: "@VeloBundle/Resources/config/routing/categorieevent.yml"
+    prefix:   /categorie
+velo_bicyclette:
+    resource: "@VeloBundle/Resources/config/routing/bicyclette.yml"
+    prefix:   /bicyclette
+velo_guide:
+    resource: "@VeloBundle/Resources/config/routing/guide.yml"
+    prefix:   /guide
+velo_commande:
+    resource: "@VeloBundle/Resources/config/routing/commande.yml"
+    prefix:   /commande
+velo_equipement:
+    resource: "@VeloBundle/Resources/config/routing/equipement.yml"
+    prefix:   /equipement
+velo_lignecommande:
+    resource: "@VeloBundle/Resources/config/routing/lignecommande.yml"
+    prefix:   /lignecommande
+
+velo_homepage:
+    path:     /
+    defaults: { _controller: VeloBundle:Default:index }
+velo_sattion:
+    path:     /velobystation/{id}
+    defaults: { _controller: VeloBundle:Station:rechercheVeloParStation }
+
