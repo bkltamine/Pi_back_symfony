@@ -42,6 +42,70 @@ class Rating
      */
     private $value;
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdevent()
+    {
+        return $this->idevent;
+    }
+
+    /**
+     * @param int $idevent
+     */
+    public function setIdevent($idevent)
+    {
+        $this->idevent = $idevent;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIduser()
+    {
+        return $this->iduser;
+    }
+
+    /**
+     * @param int $iduser
+     */
+    public function setIduser($iduser)
+    {
+        $this->iduser = $iduser;
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param int $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+
 
 }
 

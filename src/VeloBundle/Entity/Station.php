@@ -35,6 +35,54 @@ class Station
      */
     private $lieu;
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNomstation()
+    {
+        return $this->nomstation;
+    }
+
+    /**
+     * @param string $nomstation
+     */
+    public function setNomstation($nomstation)
+    {
+        $this->nomstation = $nomstation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @param string $lieu
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+    }
+
 
 }
 
