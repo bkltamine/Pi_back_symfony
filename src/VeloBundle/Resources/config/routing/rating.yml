@@ -1,0 +1,19 @@
+rating_index:
+    path:     /{idevent}
+    defaults: { _controller: "VeloBundle:Rating:index" }
+    methods:  GET
+
+rating_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Rating:show" }
+    methods:  GET
+
+rating_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Rating:new" }
+    methods:  [GET, POST]
+
+rating_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Rating:delete" }
+    methods:  DELETE

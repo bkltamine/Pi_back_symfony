@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cours list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Adresse</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cour in cours %}
+            <tr>
+                <td><a href="{{ path('api_cours_show', { 'id': cour.id }) }}">{{ cour.id }}</a></td>
+                <td>{{ cour.adresse }}</td>
+                <td>{{ cour.name }}</td>
+                <td>{{ cour.date }}</td>
+                <td>{{ cour.time }}</td>
+                <td>{{ cour.duration }}</td>
+                <td>{{ cour.status }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('api_cours_show', { 'id': cour.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

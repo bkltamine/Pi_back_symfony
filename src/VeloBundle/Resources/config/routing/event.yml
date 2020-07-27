@@ -1,0 +1,28 @@
+event_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Event:index" }
+    methods:  GET
+
+event_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Event:show" }
+    methods:  GET
+
+event_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Event:new" }
+    methods:  [GET, POST]
+
+event_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VeloBundle:Event:edit" }
+    methods:  [GET, POST]
+
+event_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Event:delete" }
+    methods:  DELETE
+event_best_destination:
+    path:     /bestDestination
+    defaults: { _controller: "VeloBundle:Event:bestDestination" }
+    methods:  GET

@@ -1,0 +1,24 @@
+lignecommande_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Lignecommande:index" }
+    methods:  GET
+
+lignecommande_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Lignecommande:show" }
+    methods:  GET
+
+lignecommande_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Lignecommande:new" }
+    methods:  [GET, POST]
+
+lignecommande_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VeloBundle:Lignecommande:edit" }
+    methods:  [GET, POST]
+
+lignecommande_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Lignecommande:delete" }
+    methods:  DELETE

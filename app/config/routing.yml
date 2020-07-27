@@ -1,0 +1,27 @@
+cours_user:
+    resource: "@CoursBundle/Controller/UserController.php"
+    type:     annotation
+
+cours_message:
+    resource: "@CoursBundle/Controller/MessageController.php"
+    type:     annotation
+
+cours_cours:
+    resource: "@CoursBundle/Controller/CoursController.php"
+    type:     annotation
+
+cours_cours:
+    resource: "@CoursBundle/Controller/CoursController.php"
+    type:     annotation
+
+cours:
+    resource: "@CoursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+velo:
+    resource: "@VeloBundle/Resources/config/routing.yml"
+    prefix:   /velo
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

@@ -1,0 +1,28 @@
+station_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Station:index" }
+    methods:  GET
+
+station_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Station:show" }
+    methods:  GET
+
+station_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Station:new" }
+    methods:  [GET, POST]
+
+station_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VeloBundle:Station:edit" }
+    methods:  [GET, POST]
+
+station_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Station:delete" }
+    methods:  DELETE
+station_affect:
+    path:     /affect/{idVelo}/{idStation}
+    defaults: { _controller: "VeloBundle:Station:affectVeloStation" }
+    methods:  GET

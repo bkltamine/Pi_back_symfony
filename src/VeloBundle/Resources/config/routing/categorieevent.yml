@@ -1,0 +1,24 @@
+categorieevent_index:
+    path:     /
+    defaults: { _controller: "VeloBundle:Categorieevent:index" }
+    methods:  GET
+
+categorieevent_show:
+    path:     /{id}/show
+    defaults: { _controller: "VeloBundle:Categorieevent:show" }
+    methods:  GET
+
+categorieevent_new:
+    path:     /new
+    defaults: { _controller: "VeloBundle:Categorieevent:new" }
+    methods:  [GET, POST]
+
+categorieevent_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VeloBundle:Categorieevent:edit" }
+    methods:  [GET, POST]
+
+categorieevent_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VeloBundle:Categorieevent:delete" }
+    methods:  DELETE
